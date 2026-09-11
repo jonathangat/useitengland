@@ -1,150 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events & Workshops | USE-IT England</title>
-    
+    <title>Events &amp; Workshops | USE-IT England</title>
+
     <!-- STANDARD SEO METADATA -->
     <meta name="description" content="Join USE-IT England at Urban Co-Lab: City Like a Local. Help co-create the first-ever free City of London map for young travellers. Sat 26 Sep or Sat 17 Oct 2026, 11am, Guildhall Art Gallery.">
     <meta name="author" content="MIND THE MAP CIC">
     <link rel="canonical" href="https://use-it.uk/events/">
-    
+
     <!-- EXTERNAL STYLESHEET -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body>
+<body class="events-page">
+
+    <!-- SKIP LINK (accessibility: jump straight to main content) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary">
         <div class="container nav-container">
-            <a href="../" class="logo-placeholder" style="text-decoration: none;">
-                <img src="../img/useitlogo.png" alt="USE-IT Logo" style="max-width: 120px;" />
-                <span style="background-color: var(--accent); color: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: 900;">ENGLAND</span>
+            <a href="../" class="logo-placeholder" aria-label="USE-IT England home">
+                <img src="../img/useitlogo.png" alt="" width="120" />
+                <span class="logo-region-badge">England</span>
             </a>
-            
-            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links-list">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
 
             <ul class="nav-links" id="nav-links-list">
                 <li><a href="../#about">About</a></li>
-                <li><a href="#upcoming">Upcoming Events</a></li>
+                <li><a href="#event" aria-current="page">Upcoming Event</a></li>
                 <li><a href="#signup">Get Notified</a></li>
                 <li><a href="../#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <header class="hero section-padding">
-        <div class="container events-hero-stacked">
-            <div class="hero-banner">
-                <img src="../img/co_lab.png" alt="Urban Co-Lab: City Like a Local" class="hero-banner-img">
+    <main id="main-content">
+
+        <!-- PAGE HEADER -->
+        <header class="events-intro section-padding">
+            <div class="container">
+                <p class="eyebrow">USE-IT England Events</p>
+                <h1>Upcoming Workshops &amp; Community Events</h1>
+                <p class="events-intro-lead">Help map your city, meet fellow creators, and shape free local guides. Our workshops and walks are always free to join.</p>
             </div>
-            <div class="hero-content">
-                <h1>Local Workshops & <span>Community Events</span></h1>
-                <p>Want to help map your city, meet fellow creators, or take part in alternative urban walks? Check out our upcoming sessions below.</p>
-                <a href="#upcoming" class="btn">View Events</a>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- UPCOMING EVENTS SECTION -->
-    <section class="production-section section-padding" id="upcoming">
-        <div class="container">
-            <h2>Upcoming Events</h2>
-            <p class="section-subtitle">Grab a spot via Eventbrite. All our local workshops and walks are free to join.</p>
+        <!-- FEATURED EVENT -->
+        <section class="event-feature section-padding" id="event" aria-labelledby="event-heading">
+            <div class="container">
+                <div class="event-layout">
 
-            <div class="maps-grid single-event">
-                <!-- EVENT CARD 1 -->
-                <article class="map-card">
-                    <div>
-                        <span class="map-badge">Get Your Tickets Now</span>
-                        <h3>Urban Co-Lab: City Like a Local</h3>
-                        <p>Got a favourite hidden spot in the Square Mile? Help us co-create the ultimate free City of London guide, made by locals, for young travellers. Expect fun games, free pizza and drinks, and the chance to shape the first-ever USE-IT London map.</p>
-                        
-                        <div class="date-choice">
-                            <p class="date-choice-label">Two dates — pick the one that suits you:</p>
-                            <div class="date-options">
-                                <div class="date-option">
-                                    <span class="date-option-day">Sat 26 Sep</span>
-                                    <span class="date-option-time">11:00 AM</span>
-                                </div>
-                                <span class="date-option-or">or</span>
-                                <div class="date-option">
-                                    <span class="date-option-day">Sat 17 Oct</span>
-                                    <span class="date-option-time">11:00 AM</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="event-meta">
-                            <span>📍 Guildhall Art Gallery, London EC2V 5AE</span>
-                            <span>🎟️ Free</span>
-                        </div>
+                    <!-- Event poster / image -->
+                    <div class="event-media">
+                        <img src="../img/co_lab.png"
+                             alt="Urban Co-Lab: City Like a Local event poster"
+                             class="event-poster"
+                             width="3240" height="1620" />
                     </div>
-                    <div>
-                        <a href="https://www.eventbrite.co.uk/e/urban-co-lab-city-like-a-local-tickets-1999199872636" target="_blank" rel="noopener" class="btn" style="width: 100%; text-align: center; margin-top: 16px;">
-                            Reserve Spot on Eventbrite ↗
+
+                    <!-- Event details -->
+                    <div class="event-details">
+                        <p class="event-status">
+                            <span class="status-tag">Booking open</span>
+                            <span class="status-price">Free</span>
+                        </p>
+
+                        <h2 id="event-heading">Urban Co-Lab: City Like a Local</h2>
+
+                        <p class="event-description">
+                            Got a favourite hidden spot in the Square Mile? Help us co-create the
+                            ultimate free City of London guide, made by locals, for young travellers.
+                            Expect fun games, free pizza and drinks, and the chance to shape the
+                            first-ever USE-IT London map.
+                        </p>
+
+                        <!-- Key details as a definition list for clear, accessible structure -->
+                        <dl class="event-facts">
+                            <div class="event-fact">
+                                <dt>Location</dt>
+                                <dd>Guildhall Art Gallery, Guildhall Yard, London EC2V 5AE</dd>
+                            </div>
+                            <div class="event-fact">
+                                <dt>Cost</dt>
+                                <dd>Free</dd>
+                            </div>
+                        </dl>
+
+                        <!-- Date choice: two instances of the same event -->
+                        <div class="date-choice" role="group" aria-labelledby="date-choice-heading">
+                            <h3 id="date-choice-heading" class="date-choice-heading">Choose a date</h3>
+                            <p class="date-choice-hint">This event runs twice. Pick whichever date suits you.</p>
+                            <ul class="date-options">
+                                <li class="date-option">
+                                    <span class="date-option-day">Saturday 26 September 2026</span>
+                                    <span class="date-option-time">11:00 AM</span>
+                                </li>
+                                <li class="date-option">
+                                    <span class="date-option-day">Saturday 17 October 2026</span>
+                                    <span class="date-option-time">11:00 AM</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <a href="https://www.eventbrite.co.uk/e/urban-co-lab-city-like-a-local-tickets-1999199872636"
+                           target="_blank" rel="noopener noreferrer"
+                           class="btn event-cta">
+                            Get tickets on Eventbrite
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                            <span aria-hidden="true">↗</span>
                         </a>
                     </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
-    <!-- GENERAL SIGN UP SECTION -->
-    <section class="contact-section section-padding" id="signup">
-        <div class="container contact-container">
-            <h2 style="text-align: center; font-size: 38px; font-weight: 900; text-transform: uppercase; margin-bottom: 12px;">Never Miss An Event</h2>
-            <p class="section-subtitle">Sign up with interest to get pinged when we drop new event.</p>
-            
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                <input type="hidden" name="access_key" value="3e6623bc-6b92-4109-b5a0-05739a0efe96">
-                <input type="hidden" name="subject" value="New General Event Signup">
-                
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="city">Your City</label>
-                    <input type="text" id="city" name="city" placeholder="e.g. London, Oxford, Manchester">
-                </div>
-
-                <button type="submit" class="btn form-submit-btn">Keep Me Updated</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- HIDDEN PAST EVENTS SECTION 
-        <section class="network-section section-padding" id="past-events" style="display: none;">
-            <div class="container">
-                <h2>Past Events</h2>
-                <p>Archive of our previous walks and mapping jams.</p>
             </div>
         </section>
-    -->
+
+        <!-- GENERAL SIGN UP SECTION -->
+        <section class="contact-section section-padding" id="signup" aria-labelledby="signup-heading">
+            <div class="container contact-container">
+                <h2 id="signup-heading" class="signup-heading">Never miss an event</h2>
+                <p class="section-subtitle">Sign up to get notified when we announce new events.</p>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="3e6623bc-6b92-4109-b5a0-05739a0efe96">
+                    <input type="hidden" name="subject" value="New General Event Signup">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Your city</label>
+                        <input type="text" id="city" name="city" autocomplete="address-level2" placeholder="e.g. London, Oxford, Manchester">
+                    </div>
+
+                    <button type="submit" class="btn form-submit-btn">Keep me updated</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
     <!-- FOOTER -->
     <footer>
         <div class="container footer-grid">
             <div class="publisher-info">
-                <h4>USE-IT England</h4>
+                <h2 class="footer-heading">USE-IT England</h2>
                 <p>Published by <strong>MIND THE MAP CIC</strong></p>
                 <p>Publisher of USE-IT Maps in England and Wales</p>
-                <p style="margin-top: 16px; opacity: 0.5; font-size: 13px;">124 City Road, London, EC1V 2NX</p>
+                <p class="footer-address">124 City Road, London, EC1V 2NX</p>
             </div>
             <div class="footer-logos">
-                <img src="../img/mind_the_map_logo.png" alt="Mind The Map CIC Logo" style="max-width: 150px;" />
+                <img src="../img/mind_the_map_logo.png" alt="Mind The Map CIC" width="150" />
             </div>
         </div>
         <div class="container footer-bottom">
