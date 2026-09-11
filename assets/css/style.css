@@ -318,6 +318,15 @@ img {
     box-shadow: 12px 12px 0px var(--dark);
 }
 
+.event-card-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--dark);
+    border-radius: var(--radius-playful);
+    box-shadow: 4px 4px 0px var(--dark);
+}
+
 .map-badge {
     display: inline-block;
     background-color: var(--accent);
@@ -540,6 +549,18 @@ footer {
     padding-top: 30px;
     text-align: center;
     font-size: 13px;
+}
+
+.photo-credit-footer {
+    margin-top: 8px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+}
+
+.photo-credit-footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .instagram-follow-bar {
