@@ -886,18 +886,36 @@ textarea:focus-visible {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
+    align-items: stretch;
 }
 
+/* Each <li> takes an equal share so both buttons are the same width */
+.events-page .date-options > li {
+    flex: 1 1 220px;
+    display: flex;
+}
+
+/* Each date is a clickable button linking to Eventbrite */
 .events-page .date-option {
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    background-color: var(--light);
+    gap: 6px;
+    width: 100%;
+    background-color: var(--white);
     border: 3px solid var(--dark);
     border-radius: var(--radius-sm);
     box-shadow: 4px 4px 0px var(--dark);
-    padding: 16px 20px;
-    flex: 1 1 200px;
+    padding: 18px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.events-page .date-option:hover,
+.events-page .date-option:focus-visible {
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0px var(--primary);
+    background-color: #FCFFEB;
 }
 
 .events-page .date-option-day {
@@ -913,14 +931,16 @@ textarea:focus-visible {
     color: var(--dark);
 }
 
-/* Primary call to action */
-.events-page .event-cta {
+.events-page .date-option-cta {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+    gap: 6px;
+    margin-top: 6px;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--primary);
 }
 
 /* Sign-up heading */
