@@ -6,7 +6,7 @@
     <title>Events &amp; Workshops | USE-IT England</title>
 
     <!-- STANDARD SEO METADATA -->
-    <meta name="description" content="Join USE-IT England at Urban Co-Lab: City Like a Local. Help co-create the first-ever free City of London map for young travellers. Sat 26 Sep or Sat 17 Oct 2026, 11am, Guildhall Art Gallery.">
+    <meta name="description" content="Join USE-IT England at Urban Co-Lab: City Like a Local. Help co-create the first-ever free City of London map for young travellers. Next session: Sat 17 Oct 2026, 11am, Guildhall Art Gallery.">
     <meta name="author" content="MIND THE MAP CIC">
     <link rel="canonical" href="https://use-it.uk/events/">
 
@@ -21,21 +21,23 @@
     <!-- NAVBAR -->
     <nav class="navbar" aria-label="Primary">
         <div class="container nav-container">
-            <a href="../" class="logo-placeholder" aria-label="USE-IT England home">
-                <img src="../img/useitlogo.png" alt="" width="120" />
-                <span class="logo-region-badge">England</span>
+            <a href="../" class="logo-placeholder" aria-label="USE-IT England home" style="text-decoration: none;">
+                <img src="../img/useitlogo.png" alt="USE-IT Logo" style="max-width: 120px;" />
+                <span style="background-color: var(--accent); color: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: 900;">ENGLAND</span>
             </a>
 
-            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links-list">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links-list">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
             <ul class="nav-links" id="nav-links-list">
                 <li><a href="../#about">About</a></li>
-                <li><a href="#event" aria-current="page">Upcoming Event</a></li>
-                <li><a href="#signup">Get Notified</a></li>
+                <li><a href="../#vision">Our Vision</a></li>
+                <li><a href="../#network">The Network</a></li>
+                <li><a href="../#maps">New Maps</a></li>
+                <li><a href="./" aria-current="page" class="active">Events</a></li>
                 <li><a href="../#contact">Contact</a></li>
             </ul>
         </div>
@@ -96,17 +98,15 @@
                         <!-- Date choice: two instances of the same event, each links to Eventbrite -->
                         <div class="date-choice" role="group" aria-labelledby="date-choice-heading">
                             <h3 id="date-choice-heading" class="date-choice-heading">Choose a date to book</h3>
-                            <p class="date-choice-hint">This event runs twice. Select a date to get your free tickets on Eventbrite.</p>
+                            <p class="date-choice-hint">Select an upcoming date to get your free tickets on Eventbrite.</p>
                             <ul class="date-options">
                                 <li>
-                                    <a href="https://www.eventbrite.co.uk/e/urban-co-lab-city-like-a-local-tickets-1999199872636"
-                                       target="_blank" rel="noopener noreferrer"
-                                       class="date-option">
+                                    <div class="date-option date-option--past" aria-disabled="true">
+                                        <span class="past-badge">Past Event</span>
                                         <span class="date-option-day">Saturday 26 September 2026</span>
                                         <span class="date-option-time">11:00 AM</span>
-                                        <span class="date-option-cta">Book on Eventbrite <span aria-hidden="true">↗</span></span>
-                                        <span class="visually-hidden">(opens in a new tab)</span>
-                                    </a>
+                                        <span class="date-option-cta date-option-cta--past">Event concluded</span>
+                                    </div>
                                 </li>
                                 <li>
                                     <a href="https://www.eventbrite.co.uk/e/urban-co-lab-city-like-a-local-tickets-1999199872636"

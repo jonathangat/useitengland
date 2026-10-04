@@ -943,6 +943,54 @@ textarea:focus-visible {
     color: var(--primary);
 }
 
+/* Past / greyed out event styling */
+.events-page .date-option--past {
+    background-color: #ededed;
+    border-color: #9c9c9c;
+    box-shadow: 4px 4px 0px #b5b5b5;
+    cursor: default;
+    opacity: 0.72;
+    filter: grayscale(100%);
+    pointer-events: none;
+    user-select: none;
+}
+
+.events-page .date-option--past:hover,
+.events-page .date-option--past:focus-visible {
+    transform: none;
+    box-shadow: 4px 4px 0px #b5b5b5;
+    background-color: #ededed;
+}
+
+.events-page .date-option--past .date-option-day {
+    color: #555555;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.events-page .date-option--past .date-option-time {
+    color: #777777;
+}
+
+.events-page .date-option-cta--past {
+    color: #666666 !important;
+    font-weight: 700;
+}
+
+.events-page .past-badge {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: #616161;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 3px 8px;
+    border-radius: var(--radius-sm);
+    margin-bottom: 2px;
+}
+
 /* Sign-up heading */
 .events-page .signup-heading {
     text-align: center;
