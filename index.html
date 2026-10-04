@@ -31,18 +31,12 @@
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary">
         <div class="container nav-container">
-            <div class="logo-placeholder">
+            <a href="./" class="logo-placeholder" aria-label="USE-IT England home" style="text-decoration: none;">
                 <img src="img/useitlogo.png" alt="USE-IT Logo" style="max-width: 120px;" />
                 <span style="background-color: var(--accent); color: var(--dark); padding: 2px 6px; border-radius: 4px; font-size: 12px; font-weight: 900;">ENGLAND</span>
-            </div>
-            
-            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            </a>
 
             <ul class="nav-links" id="nav-links-list">
                 <li><a href="#about">About</a></li>
@@ -50,8 +44,25 @@
                 <li><a href="#network">The Network</a></li>
                 <li><a href="#maps">New Maps</a></li>
                 <li><a href="events/">Events</a></li>
+                <li><a href="#donate">Donate</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="nav-donate-li">
+                    <a href="https://buy.stripe.com/eVq4gs08E76A6XyfhR7ok00" target="_blank" rel="noopener noreferrer" class="btn-donate-nav">
+                        Donate <span aria-hidden="true">♥</span>
+                    </a>
+                </li>
             </ul>
+
+            <div class="nav-actions">
+                <a href="https://buy.stripe.com/eVq4gs08E76A6XyfhR7ok00" target="_blank" rel="noopener noreferrer" class="btn-donate-nav-mobile" aria-label="Donate to USE-IT England">
+                    Donate <span aria-hidden="true">♥</span>
+                </a>
+                <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links-list">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -139,6 +150,49 @@
         </div>
     </section>
 
+    <!-- DONATION SECTION -->
+    <section class="donation-section section-padding" id="donate" aria-labelledby="donation-heading">
+        <div class="container">
+            <div class="donation-card">
+                <div class="donation-header">
+                    <span class="donation-badge">Support Our Mission</span>
+                    <h2 id="donation-heading">Keep Our Maps <span>100% Free</span></h2>
+                    <p class="donation-lead">
+                        USE-IT England is created by <strong>MIND THE MAP CIC</strong>, a non-profit Community Interest Company.
+                        We never accept paid ads, sponsored listings, or pay-to-play tourist traps.
+                    </p>
+                </div>
+
+                <div class="donation-perks-grid">
+                    <div class="donation-perk">
+                        <div class="perk-icon" aria-hidden="true">🗺️</div>
+                        <h3>Print Free Paper Maps</h3>
+                        <p>Funds printing runs and free distribution to hostels, youth hubs, and info desks across the country.</p>
+                    </div>
+                    <div class="donation-perk">
+                        <div class="perk-icon" aria-hidden="true">✏️</div>
+                        <h3>Empower Local Youth</h3>
+                        <p>Powers free co-creation workshops, writing sessions, and design jams with passionate local residents.</p>
+                    </div>
+                    <div class="donation-perk">
+                        <div class="perk-icon" aria-hidden="true">✨</div>
+                        <h3>Stay 100% Independent</h3>
+                        <p>No commercial influence. Your donation keeps our guides raw, honest, and truly made by locals.</p>
+                    </div>
+                </div>
+
+                <div class="donation-action-box">
+                    <a href="https://buy.stripe.com/eVq4gs08E76A6XyfhR7ok00" target="_blank" rel="noopener noreferrer" class="btn btn-donate-large">
+                        Donate via Stripe <span class="donate-heart" aria-hidden="true">♥</span>
+                    </a>
+                    <p class="donation-secure-note">
+                        <span aria-hidden="true">🔒</span> Secure payment powered by Stripe. Every contribution helps keep youth travel independent.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CONTACT SECTION -->
     <section class="contact-section section-padding" id="contact">
         <div class="container contact-container">
@@ -176,6 +230,11 @@
                 <p>Published by <strong>MIND THE MAP CIC</strong></p>
                 <p>Publisher of USE-IT Maps in England and Wales</p>
                 <p style="margin-top: 16px; opacity: 0.5; font-size: 13px;">124 City Road, London, EC1V 2NX</p>
+                <p style="margin-top: 14px;">
+                    <a href="https://buy.stripe.com/eVq4gs08E76A6XyfhR7ok00" target="_blank" rel="noopener noreferrer" class="footer-donate-link">
+                        Donate to Support Our Maps <span aria-hidden="true">♥</span>
+                    </a>
+                </p>
             </div>
             <div class="footer-logos">
                 <img src="img/mind_the_map_logo.png" alt="Mind The Map CIC Logo" style="max-width: 150px;" />
