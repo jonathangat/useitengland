@@ -118,12 +118,6 @@ img {
     color: var(--primary);
 }
 
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .btn-donate-nav {
     display: inline-flex;
     align-items: center;
@@ -148,30 +142,6 @@ img {
     color: var(--accent);
     transform: translate(-2px, -2px);
     box-shadow: 5px 5px 0px var(--dark);
-}
-
-.btn-donate-nav-mobile {
-    display: none;
-    align-items: center;
-    gap: 5px;
-    background-color: var(--accent);
-    color: var(--dark);
-    padding: 6px 12px;
-    font-size: 13px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-radius: var(--radius-sm);
-    border: 2px solid var(--dark);
-    box-shadow: 2px 2px 0px var(--dark);
-    text-decoration: none;
-    transition: var(--transition);
-    white-space: nowrap;
-}
-
-.btn-donate-nav-mobile:hover {
-    background-color: var(--dark);
-    color: var(--accent);
 }
 
 .menu-toggle {
@@ -634,10 +604,7 @@ footer {
 
     .menu-toggle {
         display: flex;
-    }
-
-    .btn-donate-nav-mobile {
-        display: inline-flex;
+        margin-left: auto;
     }
 
     .nav-links {
@@ -648,11 +615,14 @@ footer {
         left: 0;
         width: 100%;
         background-color: var(--white);
-        padding: 32px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 24px 20px 32px;
+        box-shadow: 0 12px 36px rgba(0,0,0,0.18);
         border-bottom: 3px solid var(--dark);
-        gap: 20px;
+        gap: 16px;
         align-items: stretch;
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        z-index: 1050;
     }
 
     .nav-links.active {
@@ -661,15 +631,19 @@ footer {
 
     .nav-links .nav-donate-li {
         width: 100%;
-        margin-top: 8px;
+        margin-top: 10px;
+        padding-top: 14px;
+        border-top: 2px dashed rgba(18, 18, 18, 0.2);
     }
 
     .nav-links .nav-donate-li .btn-donate-nav {
         display: flex;
         justify-content: center;
         width: 100%;
-        padding: 12px 20px;
+        padding: 14px 20px;
         font-size: 16px;
+        text-align: center;
+        box-sizing: border-box;
     }
 
     .hero-grid,
@@ -1219,26 +1193,37 @@ textarea:focus-visible {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
 }
 
 .btn-donate-large {
     background-color: var(--accent);
     color: var(--dark);
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 900;
-    padding: 18px 42px;
-    box-shadow: 6px 6px 0px var(--dark);
+    padding: 16px 36px;
+    border: 3px solid var(--dark);
+    border-radius: var(--radius-sm);
+    box-shadow: 5px 5px 0px var(--dark);
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
 .btn-donate-large:hover {
     background-color: var(--primary);
     color: var(--white);
-    transform: translate(-3px, -3px);
-    box-shadow: 8px 8px 0px var(--dark);
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px var(--dark);
 }
 
 .btn-donate-large .donate-heart {
@@ -1251,6 +1236,11 @@ textarea:focus-visible {
     font-weight: 600;
     color: #555;
     max-width: 520px;
+    text-align: center;
+    line-height: 1.4;
+    display: block;
+    width: 100%;
+    margin: 0;
 }
 
 /* Events page donate callout */
@@ -1266,14 +1256,15 @@ textarea:focus-visible {
     box-shadow: 8px 8px 0px var(--dark);
     padding: 44px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    gap: 36px;
 }
 
 .events-donate-content {
-    flex: 1 1 480px;
+    flex: 1 1 500px;
+    min-width: 0;
 }
 
 .events-donate-badge {
@@ -1291,7 +1282,7 @@ textarea:focus-visible {
 }
 
 .events-donate-content h2 {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.5px;
@@ -1300,11 +1291,14 @@ textarea:focus-visible {
 }
 
 .events-donate-content p {
-    font-size: 17px;
+    font-size: 16px;
     color: #333;
+    line-height: 1.5;
+    margin-bottom: 0;
 }
 
 .events-donate-cta {
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1315,6 +1309,8 @@ textarea:focus-visible {
     font-size: 13px;
     font-weight: 600;
     color: #666;
+    text-align: center;
+    display: block;
 }
 
 .footer-donate-link {
@@ -1342,27 +1338,61 @@ textarea:focus-visible {
     box-shadow: 5px 5px 0px var(--dark);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 880px) {
     .donation-perks-grid {
         grid-template-columns: 1fr;
+        gap: 16px;
     }
-}
 
-@media (max-width: 768px) {
     .donation-card {
-        padding: 36px 20px;
+        padding: 30px 18px;
     }
+
     .donation-header h2 {
-        font-size: 28px;
-    }
-    .donation-lead {
-        font-size: 16px;
-    }
-    .events-donate-box {
-        padding: 32px 20px;
-    }
-    .events-donate-content h2 {
         font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .donation-lead {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+
+    .events-donate-box {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 28px 18px;
+        gap: 22px;
+    }
+
+    .events-donate-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .events-donate-content h2 {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+
+    .events-donate-content p {
+        font-size: 15px;
+    }
+
+    .events-donate-cta {
+        width: 100%;
+        align-items: center;
+        margin-top: 4px;
+    }
+
+    .btn-donate-large {
+        width: 100%;
+        max-width: 320px;
+        padding: 14px 18px;
+        font-size: 15px;
+        box-shadow: 4px 4px 0px var(--dark);
     }
 }
 
